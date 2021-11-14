@@ -50,10 +50,16 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Controladores\EstadoController.cs" />
     <Compile Include="Controladores\LoginController.cs" />
+    <Compile Include="Controladores\TicketsController.cs" />
     <Compile Include="Controladores\TipoSolicitudController.cs" />
     <Compile Include="Modelos\DAO\Conexion.cs" />
+    <Compile Include="Modelos\DAO\EstadoDAO.cs" />
+    <Compile Include="Modelos\DAO\TicketsDAO.cs" />
     <Compile Include="Modelos\DAO\UsuarioDAO.cs" />
+    <Compile Include="Modelos\Entidades\Estado.cs" />
+    <Compile Include="Modelos\Entidades\Tickets.cs" />
     <Compile Include="Modelos\Entidades\Usuario.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -62,6 +68,12 @@
     </Compile>
     <Compile Include="Vistas\Clientes ySolicitudView.Designer.cs">
       <DependentUpon>Clientes ySolicitudView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vistas\EstadoSolicitud.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vistas\EstadoSolicitud.Designer.cs">
+      <DependentUpon>EstadoSolicitud.cs</DependentUpon>
     </Compile>
     <Compile Include="Vistas\LoginView.cs">
       <SubType>Form</SubType>
@@ -74,6 +86,12 @@
     </Compile>
     <Compile Include="Vistas\MenuView.Designer.cs">
       <DependentUpon>MenuView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vistas\TicketsView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vistas\TicketsView.Designer.cs">
+      <DependentUpon>TicketsView.cs</DependentUpon>
     </Compile>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -88,11 +106,17 @@
     <EmbeddedResource Include="Vistas\Clientes ySolicitudView.resx">
       <DependentUpon>Clientes ySolicitudView.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Vistas\EstadoSolicitud.resx">
+      <DependentUpon>EstadoSolicitud.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Vistas\LoginView.resx">
       <DependentUpon>LoginView.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Vistas\MenuView.resx">
       <DependentUpon>MenuView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vistas\TicketsView.resx">
+      <DependentUpon>TicketsView.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="App.config" />
     <None Include="Properties\Settings.settings">

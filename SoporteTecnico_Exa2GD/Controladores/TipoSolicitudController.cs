@@ -15,12 +15,35 @@ namespace SoporteTecnico_Exa2GD.Controladores
 
         Clientes_ySolicitudView vista;
         string operacion = string.Empty;
+        UsuarioDAO userDAO = new UsuarioDAO();
+        Usuario user = new Usuario();
 
         public TipoSolicitudController(Clientes_ySolicitudView view)
         {
             vista = view;
             vista.Nuevobutton.Click += new EventHandler(Nuevo);
             vista.Guardarbutton.Click += new EventHandler(Guardar);
+            vista.Load += new EventHandler(Load);
+            vista.Modificarbutton.Click += new EventHandler(Modificar);
+            vista.Eliminarbutton.Click += new EventHandler(Eliminar);
+        }
+
+        private void Eliminar(object sender, EventArgs e)
+        {
+            if (vista.SolicituddataGridView.SelectedRows.Count > 0)
+            {
+                bool elimino = userDAO.EliminarUsuario(Convert.ToInt32(vista.SolicituddataGridView.CurrentRow.Cells[0].Value.ToString()));
+
+                if (elimino)
+                {
+                    DesabilitarControles();
+                    LimpiarControles();
+                    MessageBox.Show("Solicitud Eliminada Exitosamente", "Atencion", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                    ListarUsuarios();
+                }
+                
+            }
         }
 
         private void Nuevo(object sender, EventArgs e)
@@ -28,6 +51,32 @@ namespace SoporteTecnico_Exa2GD.Controladores
             HabilitarControles();
             operacion = "Nuevo";
         }
+
+        private void Modificar(object sender, EventArgs e)
+        {
+            operacion = "Modificar";
+            if (vista.SolicituddataGridView.SelectedRows.Count > 0)
+            {
+                vista.IdtextBox.Text = vista.SolicituddataGridView.CurrentRow.Cells["ID"].Value.ToString();
+                vista.NombretextBox.Text = vista.SolicituddataGridView.CurrentRow.Cells["NOMBRE"].Value.ToString();
+                vista.IdentidadtextBox.Text = vista.SolicituddataGridView.CurrentRow.Cells["IDENTIDAD"].Value.ToString();
+                vista.DirecciontextBox.Text = vista.SolicituddataGridView.CurrentRow.Cells["DIRECCION"].Value.ToString();
+                vista.EmailtextBox.Text = vista.SolicituddataGridView.CurrentRow.Cells["EMAIL"].Value.ToString();
+                vista.ReparacionPCcheckBox.Checked = Convert.ToBoolean(vista.SolicituddataGridView.CurrentRow.Cells["REPARACION_PC"].Value);
+                vista.ReparacionMovilcheckBox.Checked = Convert.ToBoolean(vista.SolicituddataGridView.CurrentRow.Cells["REPARACION_MOVIL"].Value);
+                vista.CambioPiezascheckBox.Checked = Convert.ToBoolean(vista.SolicituddataGridView.CurrentRow.Cells["CAMBIO_DE_PIEZAS"].Value);
+                vista.DesbloqueocheckBox.Checked = Convert.ToBoolean(vista.SolicituddataGridView.CurrentRow.Cells["DESBLOQUEO"].Value);
+
+                HabilitarControles();
+            }
+        }
+
+        private void Load(object sender, EventArgs e)
+        {
+            ListarUsuarios();
+        }
+
+
 
         private void Guardar(object sender, EventArgs e)
         {
@@ -62,10 +111,7 @@ namespace SoporteTecnico_Exa2GD.Controladores
                 return;
             }
 
-
-
-            UsuarioDAO userDAO = new UsuarioDAO();
-            Usuario user = new Usuario();
+         
 
             user.Nombre = vista.NombretextBox.Text;
             user.Identidad = vista.IdentidadtextBox.Text;
@@ -77,21 +123,53 @@ namespace SoporteTecnico_Exa2GD.Controladores
             user.CambioDePiezas = vista.CambioPiezascheckBox.Checked;
             user.Desbloqueo = vista.DesbloqueocheckBox.Checked;
 
-           
-           bool inserto = userDAO.InsertarNuevoUsuario(user);
+            if (operacion == "Nuevo")
+            {
+                bool inserto = userDAO.InsertarNuevoUsuario(user);
 
-            if (inserto)
-            {
-                DesabilitarControles();
-                LimpiarControles();
-                MessageBox.Show("Solicitud Creada Exitosamente", "Atencion", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                if (inserto)
+                {
+                    DesabilitarControles();
+                    LimpiarControles();
+                    MessageBox.Show("Solicitud Creada Exitosamente", "Atencion", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                    ListarUsuarios();
+                }
+                else
+                {
+                    MessageBox.Show("Fallo al crear su Solicitud", "Atencion", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
             }
-            else
+            else if (operacion == "Modificar")
             {
-                MessageBox.Show("Fallo al crear su Solicitud", "Atencion", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                user.Id = Convert.ToInt32(vista.IdtextBox.Text);
+                bool Modifico = userDAO.ActualizarUsuario(user);
+               
+                if (Modifico)
+                {
+                    DesabilitarControles();
+                    LimpiarControles();
+                    MessageBox.Show("Solicitud Modificada Exitosamente", "Atencion", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+
+                    ListarUsuarios();
+                }
+                else
+                {
+                    MessageBox.Show("Fallo al Modificar su Solicitud", "Atencion", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
             }
+
+           
+          
 
         }
+
+        private void ListarUsuarios()
+        {
+            vista.SolicituddataGridView.DataSource = userDAO.GetUsuarios(); 
+        }
+
 
         private void LimpiarControles()
         {
@@ -122,7 +200,6 @@ namespace SoporteTecnico_Exa2GD.Controladores
             
 
             vista.Guardarbutton.Enabled = true;
-            vista.Cancelarbutton.Enabled = true;
             vista.Modificarbutton.Enabled = false;
             vista.Nuevobutton.Enabled = false;
         }
@@ -139,8 +216,7 @@ namespace SoporteTecnico_Exa2GD.Controladores
 
 
 
-            vista.Guardarbutton.Enabled = false;
-            vista.Cancelarbutton.Enabled = false;
+            vista.Guardarbutton.Enabled = false;           
             vista.Modificarbutton.Enabled = true;
             vista.Nuevobutton.Enabled = true;
         }

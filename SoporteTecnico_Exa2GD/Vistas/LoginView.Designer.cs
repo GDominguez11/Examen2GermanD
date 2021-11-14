@@ -61,6 +61,7 @@ namespace SoporteTecnico_Exa2GD.Vistas
             this.EmailtextBox.Name = "EmailtextBox";
             this.EmailtextBox.Size = new System.Drawing.Size(224, 20);
             this.EmailtextBox.TabIndex = 2;
+            this.EmailtextBox.Text = "neydominguez11@gmail.com";
             // 
             // ContraseñatextBox
             // 
@@ -69,6 +70,7 @@ namespace SoporteTecnico_Exa2GD.Vistas
             this.ContraseñatextBox.PasswordChar = '*';
             this.ContraseñatextBox.Size = new System.Drawing.Size(224, 20);
             this.ContraseñatextBox.TabIndex = 3;
+            this.ContraseñatextBox.Text = "1234";
             // 
             // Aceptarbutton
             // 
