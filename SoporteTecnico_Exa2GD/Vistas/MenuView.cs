@@ -42,5 +42,12 @@ namespace SoporteTecnico_Exa2GD.Vistas
             vista.MdiParent = this;
             vista.Show();
         }
+
+        private void DetallestoolStripButton_Click(object sender, EventArgs e)
+        {
+            DetallesView vista = new DetallesView();
+            vista.MdiParent = this;
+            vista.Show();
+        }
     }
 }

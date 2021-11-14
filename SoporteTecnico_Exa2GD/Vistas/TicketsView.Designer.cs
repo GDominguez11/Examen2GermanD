@@ -29,6 +29,7 @@ namespace SoporteTecnico_Exa2GD.Vistas
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.label1 = new System.Windows.Forms.Label();
             this.IdtextBox = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
@@ -44,7 +45,9 @@ namespace SoporteTecnico_Exa2GD.Vistas
             this.Guardarbutton = new System.Windows.Forms.Button();
             this.Modificarbutton = new System.Windows.Forms.Button();
             this.Nuevobutton = new System.Windows.Forms.Button();
+            this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.TicketsdataGridView)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -185,6 +188,10 @@ namespace SoporteTecnico_Exa2GD.Vistas
             this.Nuevobutton.UseVisualStyleBackColor = true;
             this.Nuevobutton.Click += new System.EventHandler(this.Nuevobutton_Click);
             // 
+            // errorProvider1
+            // 
+            this.errorProvider1.ContainerControl = this;
+            // 
             // TicketsView
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 13F);
@@ -210,6 +217,7 @@ namespace SoporteTecnico_Exa2GD.Vistas
             this.Text = "Tickets";
             this.Load += new System.EventHandler(this.TicketsView_Load);
             ((System.ComponentModel.ISupportInitialize)(this.TicketsdataGridView)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -232,5 +240,6 @@ namespace SoporteTecnico_Exa2GD.Vistas
         public System.Windows.Forms.Button Guardarbutton;
         public System.Windows.Forms.Button Modificarbutton;
         public System.Windows.Forms.Button Nuevobutton;
+        public System.Windows.Forms.ErrorProvider errorProvider1;
     }
 }

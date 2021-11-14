@@ -32,15 +32,15 @@ namespace SoporteTecnico_Exa2GD.Vistas
             this.ribbonControlAdv1 = new Syncfusion.Windows.Forms.Tools.RibbonControlAdv();
             this.toolStripTabItem1 = new Syncfusion.Windows.Forms.Tools.ToolStripTabItem();
             this.toolStripEx1 = new Syncfusion.Windows.Forms.Tools.ToolStripEx();
-            this.ClientesyTipostoolStripButton = new System.Windows.Forms.ToolStripButton();
             this.toolStripTabItem2 = new Syncfusion.Windows.Forms.Tools.ToolStripTabItem();
             this.toolStripEx2 = new Syncfusion.Windows.Forms.Tools.ToolStripEx();
-            this.SolicitudestoolStripButton = new System.Windows.Forms.ToolStripButton();
             this.TicketstoolStripTabItem = new Syncfusion.Windows.Forms.Tools.ToolStripTabItem();
             this.toolStripEx3 = new Syncfusion.Windows.Forms.Tools.ToolStripEx();
-            this.TicketstoolStripButton = new System.Windows.Forms.ToolStripButton();
             this.toolStripTabItem3 = new Syncfusion.Windows.Forms.Tools.ToolStripTabItem();
             this.toolStripEx4 = new Syncfusion.Windows.Forms.Tools.ToolStripEx();
+            this.ClientesyTipostoolStripButton = new System.Windows.Forms.ToolStripButton();
+            this.SolicitudestoolStripButton = new System.Windows.Forms.ToolStripButton();
+            this.TicketstoolStripButton = new System.Windows.Forms.ToolStripButton();
             this.DetallestoolStripButton = new System.Windows.Forms.ToolStripButton();
             ((System.ComponentModel.ISupportInitialize)(this.ribbonControlAdv1)).BeginInit();
             this.ribbonControlAdv1.SuspendLayout();
@@ -102,7 +102,7 @@ namespace SoporteTecnico_Exa2GD.Vistas
             this.toolStripTabItem1.Panel.TabIndex = 2;
             this.toolStripTabItem1.Panel.Text = "Clientes y Tipos";
             this.toolStripTabItem1.Position = 0;
-            this.toolStripTabItem1.Size = new System.Drawing.Size(103, 30);
+            this.toolStripTabItem1.Size = new System.Drawing.Size(93, 19);
             this.toolStripTabItem1.Tag = "1";
             this.toolStripTabItem1.Text = "Clientes y Tipos";
             // 
@@ -124,17 +124,6 @@ namespace SoporteTecnico_Exa2GD.Vistas
             this.toolStripEx1.Size = new System.Drawing.Size(174, 71);
             this.toolStripEx1.TabIndex = 0;
             // 
-            // ClientesyTipostoolStripButton
-            // 
-            this.ClientesyTipostoolStripButton.Image = global::SoporteTecnico_Exa2GD.Properties.Resources.apoyo_tecnico;
-            this.ClientesyTipostoolStripButton.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.ClientesyTipostoolStripButton.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.ClientesyTipostoolStripButton.Name = "ClientesyTipostoolStripButton";
-            this.ClientesyTipostoolStripButton.Size = new System.Drawing.Size(127, 54);
-            this.ClientesyTipostoolStripButton.Text = "Solicitudes de Soporte";
-            this.ClientesyTipostoolStripButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.ClientesyTipostoolStripButton.Click += new System.EventHandler(this.ClientesyTipostoolStripButton_Click);
-            // 
             // toolStripTabItem2
             // 
             this.toolStripTabItem2.Name = "toolStripTabItem2";
@@ -147,7 +136,7 @@ namespace SoporteTecnico_Exa2GD.Vistas
             this.toolStripTabItem2.Panel.TabIndex = 3;
             this.toolStripTabItem2.Panel.Text = "Estados Solicitudes";
             this.toolStripTabItem2.Position = 1;
-            this.toolStripTabItem2.Size = new System.Drawing.Size(122, 30);
+            this.toolStripTabItem2.Size = new System.Drawing.Size(112, 19);
             this.toolStripTabItem2.Tag = "2";
             this.toolStripTabItem2.Text = "Estados Solicitudes";
             // 
@@ -169,17 +158,6 @@ namespace SoporteTecnico_Exa2GD.Vistas
             this.toolStripEx2.Size = new System.Drawing.Size(299, 71);
             this.toolStripEx2.TabIndex = 0;
             // 
-            // SolicitudestoolStripButton
-            // 
-            this.SolicitudestoolStripButton.Image = global::SoporteTecnico_Exa2GD.Properties.Resources.curriculum;
-            this.SolicitudestoolStripButton.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.SolicitudestoolStripButton.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.SolicitudestoolStripButton.Name = "SolicitudestoolStripButton";
-            this.SolicitudestoolStripButton.Size = new System.Drawing.Size(110, 54);
-            this.SolicitudestoolStripButton.Text = "Estado de Solicitud";
-            this.SolicitudestoolStripButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.SolicitudestoolStripButton.Click += new System.EventHandler(this.SolicitudestoolStripButton_Click);
-            // 
             // TicketstoolStripTabItem
             // 
             this.TicketstoolStripTabItem.Name = "TicketstoolStripTabItem";
@@ -192,7 +170,7 @@ namespace SoporteTecnico_Exa2GD.Vistas
             this.TicketstoolStripTabItem.Panel.TabIndex = 4;
             this.TicketstoolStripTabItem.Panel.Text = "Tickets";
             this.TicketstoolStripTabItem.Position = 2;
-            this.TicketstoolStripTabItem.Size = new System.Drawing.Size(58, 30);
+            this.TicketstoolStripTabItem.Size = new System.Drawing.Size(48, 19);
             this.TicketstoolStripTabItem.Tag = "3";
             this.TicketstoolStripTabItem.Text = "Tickets";
             // 
@@ -214,17 +192,6 @@ namespace SoporteTecnico_Exa2GD.Vistas
             this.toolStripEx3.Size = new System.Drawing.Size(381, 71);
             this.toolStripEx3.TabIndex = 0;
             // 
-            // TicketstoolStripButton
-            // 
-            this.TicketstoolStripButton.Image = global::SoporteTecnico_Exa2GD.Properties.Resources.support_ticket;
-            this.TicketstoolStripButton.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.TicketstoolStripButton.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.TicketstoolStripButton.Name = "TicketstoolStripButton";
-            this.TicketstoolStripButton.Size = new System.Drawing.Size(49, 54);
-            this.TicketstoolStripButton.Text = "Tickets ";
-            this.TicketstoolStripButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.TicketstoolStripButton.Click += new System.EventHandler(this.TicketstoolStripButton_Click);
-            // 
             // toolStripTabItem3
             // 
             this.toolStripTabItem3.Name = "toolStripTabItem3";
@@ -237,7 +204,7 @@ namespace SoporteTecnico_Exa2GD.Vistas
             this.toolStripTabItem3.Panel.TabIndex = 5;
             this.toolStripTabItem3.Panel.Text = "Detalles";
             this.toolStripTabItem3.Position = 3;
-            this.toolStripTabItem3.Size = new System.Drawing.Size(64, 30);
+            this.toolStripTabItem3.Size = new System.Drawing.Size(54, 19);
             this.toolStripTabItem3.Tag = "3";
             this.toolStripTabItem3.Text = "Detalles";
             // 
@@ -259,6 +226,39 @@ namespace SoporteTecnico_Exa2GD.Vistas
             this.toolStripEx4.Size = new System.Drawing.Size(461, 71);
             this.toolStripEx4.TabIndex = 0;
             // 
+            // ClientesyTipostoolStripButton
+            // 
+            this.ClientesyTipostoolStripButton.Image = global::SoporteTecnico_Exa2GD.Properties.Resources.apoyo_tecnico;
+            this.ClientesyTipostoolStripButton.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.ClientesyTipostoolStripButton.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.ClientesyTipostoolStripButton.Name = "ClientesyTipostoolStripButton";
+            this.ClientesyTipostoolStripButton.Size = new System.Drawing.Size(127, 54);
+            this.ClientesyTipostoolStripButton.Text = "Solicitudes de Soporte";
+            this.ClientesyTipostoolStripButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.ClientesyTipostoolStripButton.Click += new System.EventHandler(this.ClientesyTipostoolStripButton_Click);
+            // 
+            // SolicitudestoolStripButton
+            // 
+            this.SolicitudestoolStripButton.Image = global::SoporteTecnico_Exa2GD.Properties.Resources.curriculum;
+            this.SolicitudestoolStripButton.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.SolicitudestoolStripButton.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.SolicitudestoolStripButton.Name = "SolicitudestoolStripButton";
+            this.SolicitudestoolStripButton.Size = new System.Drawing.Size(110, 54);
+            this.SolicitudestoolStripButton.Text = "Estado de Solicitud";
+            this.SolicitudestoolStripButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.SolicitudestoolStripButton.Click += new System.EventHandler(this.SolicitudestoolStripButton_Click);
+            // 
+            // TicketstoolStripButton
+            // 
+            this.TicketstoolStripButton.Image = global::SoporteTecnico_Exa2GD.Properties.Resources.support_ticket;
+            this.TicketstoolStripButton.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.TicketstoolStripButton.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.TicketstoolStripButton.Name = "TicketstoolStripButton";
+            this.TicketstoolStripButton.Size = new System.Drawing.Size(49, 54);
+            this.TicketstoolStripButton.Text = "Tickets ";
+            this.TicketstoolStripButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.TicketstoolStripButton.Click += new System.EventHandler(this.TicketstoolStripButton_Click);
+            // 
             // DetallestoolStripButton
             // 
             this.DetallestoolStripButton.Image = global::SoporteTecnico_Exa2GD.Properties.Resources.tarea_completada;
@@ -268,6 +268,7 @@ namespace SoporteTecnico_Exa2GD.Vistas
             this.DetallestoolStripButton.Size = new System.Drawing.Size(52, 54);
             this.DetallestoolStripButton.Text = "Detalles";
             this.DetallestoolStripButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.DetallestoolStripButton.Click += new System.EventHandler(this.DetallestoolStripButton_Click);
             // 
             // MenuView
             // 

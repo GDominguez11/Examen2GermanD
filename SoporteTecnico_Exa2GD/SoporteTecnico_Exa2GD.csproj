@@ -50,11 +50,13 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Controladores\DetalleController.cs" />
     <Compile Include="Controladores\EstadoController.cs" />
     <Compile Include="Controladores\LoginController.cs" />
     <Compile Include="Controladores\TicketsController.cs" />
     <Compile Include="Controladores\TipoSolicitudController.cs" />
     <Compile Include="Modelos\DAO\Conexion.cs" />
+    <Compile Include="Modelos\DAO\DetalleDAO.cs" />
     <Compile Include="Modelos\DAO\EstadoDAO.cs" />
     <Compile Include="Modelos\DAO\TicketsDAO.cs" />
     <Compile Include="Modelos\DAO\UsuarioDAO.cs" />
@@ -68,6 +70,12 @@
     </Compile>
     <Compile Include="Vistas\Clientes ySolicitudView.Designer.cs">
       <DependentUpon>Clientes ySolicitudView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vistas\DetallesView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vistas\DetallesView.Designer.cs">
+      <DependentUpon>DetallesView.cs</DependentUpon>
     </Compile>
     <Compile Include="Vistas\EstadoSolicitud.cs">
       <SubType>Form</SubType>
@@ -105,6 +113,9 @@
     </Compile>
     <EmbeddedResource Include="Vistas\Clientes ySolicitudView.resx">
       <DependentUpon>Clientes ySolicitudView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vistas\DetallesView.resx">
+      <DependentUpon>DetallesView.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Vistas\EstadoSolicitud.resx">
       <DependentUpon>EstadoSolicitud.cs</DependentUpon>
